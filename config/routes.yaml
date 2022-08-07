@@ -1,0 +1,37 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+    
+triangle:
+    path: /triangle/{a}/{b}/{c}
+    controller: App\Controller\Triangle::index
+    methods: GET      
+    
+circle:
+    path: /circle/{radius}
+    controller: App\Controller\Circle::index   
+    methods: GET  
+
+apitriangle:
+    path: /api/triangle/{a}/{b}/{c}
+    controller: App\Controller\Triangle::api
+    methods: GET      
+    
+apicircle:
+    path: /api/circle/{radius}
+    controller: App\Controller\Circle::api   
+    methods: GET  
+      
+area:
+    path: /api/area/{shape}/{radius}
+    controller: App\Controller\GeometryCalculator::area
+    methods: GET  
+    
+diameter:
+    path: /api/diameter/{shape}/{radius}
+    controller: App\Controller\GeometryCalculator::diameter
+    methods: GET      
