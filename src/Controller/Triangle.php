@@ -7,11 +7,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class Triangle   extends AbstractController
+class Triangle extends AbstractController
 {
-	/**
-     * @Route("/triangle/{a}/{b}/{c}", name="number")
-     */
     public function calculate (int $a,int $b,int $c){		 
 		$p=3.14;
 		$surface=0.5*$a*$b*cos($c); //surface
@@ -22,6 +19,7 @@ class Triangle   extends AbstractController
 		'a' => $a,
 		'b' => $b,
 		'c' => $c,
+		'radius' => '',
 		'diameter' => '',
 		'surface' => $surface,
 		'circumference' => $circumference
